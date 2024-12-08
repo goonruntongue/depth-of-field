@@ -5,9 +5,9 @@
     "start_url": "index.html",
     "display": "standalone",
     "theme_color": "#222266",
-    "icons": {
+    "icons": [{
         "src": "app-icon.png",
         "sizes": "512x512",
         "type": "image/png"
-    }
+    }]
 }
