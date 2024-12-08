@@ -1,0 +1,13 @@
+{
+    "name": "depth-of-field",
+    "short_name": "depth-of-field",
+    "description": "depth-of-field",
+    "start_url": "index.html",
+    "display": "standalone",
+    "theme_color": "#222266",
+    "icons": {
+        "src": "app-icon.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }
+}

@@ -1,0 +1,194 @@
+body {
+    font-family: "Poppins", "Noto Sans JP", sans-serif;
+}
+
+.lottie {
+    width: 150px;
+    height: 150px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+.f-value {
+    min-width: 250px;
+    font-size: 2em;
+}
+
+p.f-value span {
+    font-size: 2em;
+}
+
+.fader {
+    width: 450px;
+}
+
+.lottie {
+    width: min(160px, 75vw);
+    height: min(160px, 75vw);
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    /* flex-wrap: wrap; */
+}
+
+.f-value {
+    width: min(200px, 25vw);
+    max-width: 100%;
+    font-size: 2em;
+    margin: 0;
+}
+
+p.f-value span {
+    font-size: 2em;
+}
+
+.fader {
+    width: min(450px, 95vw);
+}
+
+.stage {
+    position: relative;
+}
+
+.stage::after {
+    display: block;
+    content: "";
+    /* background: cyan; */
+    padding-top: 24%;
+}
+
+.stage img {
+    width: 10%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+img.tree-rear {
+    left: 33%;
+    top: 10%;
+    width: 18%;
+    transform: perspective(500px) translateZ(-500px);
+}
+
+img.tree-front {
+    left: 50%;
+    top: 10%;
+    width: 18%;
+    transform: perspective(500px) translateZ(-120px);
+}
+
+img.person {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) perspective(500px) translateZ(10px);
+}
+
+.pers-wrap {
+    perspective: 1500px;
+    overflow: hidden;
+    margin-top: 1em;
+}
+
+.stage.pers-preserve {
+    transform-style: preserve-3d;
+    transform: rotateY(2deg);
+}
+
+.stage.pers-preserve::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #242424;
+    transform: perspective(500px) translateZ(-1500px) scale(5.5);
+}
+
+.controls-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    align-items: center;
+}
+
+.camera-position {
+    width: min(100%, 720px);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em 0;
+}
+
+footer span img {
+    width: 32px;
+    height: 32px;
+}
+
+@media screen and (max-width:768px) {
+    .lottie {
+        width: 45%;
+        height: unset;
+    }
+    .f-value {
+        width: 45%;
+        min-width: unset;
+    }
+    p.f-value span {
+        font-size: 1.5em;
+        white-space: nowrap;
+    }
+    .stage::after {
+        padding-top: 62%;
+    }
+    .flex-row {
+        gap: 0.5em;
+    }
+    img.person {
+        transform: translate(-50%, -50%) perspective(300px) translateZ(140px) !important;
+    }
+    .tree-front {
+        transform: perspective(300px) translateZ(80px) translate(50%, 50%)!important;
+        top: 22% !important;
+    }
+    .tree-rear {
+        top: 29% !important;
+        left: 27% !important;
+        transform: perspective(300px) translateZ(-50px) !important;
+    }
+    .controls-wrap {
+        padding-top: 1em
+    }
+}
